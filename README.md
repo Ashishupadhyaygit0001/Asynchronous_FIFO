@@ -1,4 +1,20 @@
-# Asynchronous_FIFO
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Asynchronous FIFO</h2>
+    <p>
+        In asynchronous FIFO, data read and write operations use different clock frequencies.
+        Since write and read clocks are not synchronized, it is referred to as asynchronous FIFO.
+        Usually, these are used in systems where data need to pass from one clock domain to
+        another which is generally termed as ‘clock domain crossing’. Thus, asynchronous FIFO
+        helps to synchronize data flow between two systems working on different clocks.
+
+    </p>
+</body>
+</html>
+![348475456-4c624ed2-1260-4b24-8a0c-9c0648266aa6](https://github.com/user-attachments/assets/4250dfca-6bcc-4c90-8b8f-c1583131056e)
 
 ## Signals
 
