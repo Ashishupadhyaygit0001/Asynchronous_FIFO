@@ -150,4 +150,5 @@ an opposite domain.</p>
 
 
  <h2>Timing Diagram</h2>
-![image](https://github.com/user-attachments/assets/e8fc120d-cd4a-4d19-96e6-fda7ff84cf2a)
+
+![348476824-09cdfe68-2263-45c2-ac24-14f8324599bb](https://github.com/user-attachments/assets/6064be49-b466-41db-8e0a-f3be7bba7d93)
