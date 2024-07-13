@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
 </head>
 <body>
@@ -11,10 +13,40 @@
         another which is generally termed as ‘clock domain crossing’. Thus, asynchronous FIFO
         helps to synchronize data flow between two systems working on different clocks.
 
+</body>
+</html>
+
+![image](https://github.com/user-attachments/assets/fb75c745-d019-4c74-9387-c83e4dce0cf2)
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Asynchronous FIFO Operation</h2>
+    <p>
+        In the case of asynchronous FIFO, the write pointer is aligned to the write clock domain 
+        whereas the read pointer is aligned to the read clock domain. Hence, it requires domain crossing 
+        to calculate FIFO full and empty conditions. This causes metastability in the actual design. 
+        In order to resolve this metastability, 2 flip-flops or 3 flip-flops synchronizer can be used to pass 
+        write and read pointers. A single “2 FF synchronizer” can resolve metastability for only one bit. 
+        Hence, depending on write and read pointers, multiple 2FF synchronizers are required.
     </p>
 </body>
 </html>
-![348475456-4c624ed2-1260-4b24-8a0c-9c0648266aa6](https://github.com/user-attachments/assets/4250dfca-6bcc-4c90-8b8f-c1583131056e)
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Usage of Binary to Gray code converter and vice-versa in Asynchronous FIFO</h1>
+    We should not pass binary formatted write and read pointer values. Due to metastability, the overall write or read pointer value might be different.<br>
+    <p>Example: When binary value <code>wr_ptr = 4'b1101</code> at the write clock domain is transferred via 2FF synchronizer, at the read clock domain <code>wr_ptr</code> value may be received as <code>4'b1111</code> or any other value that is not acceptable. Whereas gray code is assured to have only a single bit change from its previous value. Hence, both write and read pointers need to convert 
+first to their equivalent gray code in their corresponding domain and then pass them to 
+an opposite domain.</p>
+</body>
+</html>
+
+
 
 ## Signals
 
@@ -27,6 +59,7 @@
     <li><strong>d_out</strong>: Synchronized output data signal.</li>
     <li><strong>q1</strong>: Intermediate register to hold the synchronized data.</li>
 </ul>
+
 
 ### `wptr_handler` Module
 
