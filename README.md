@@ -147,3 +147,7 @@ an opposite domain.</p>
     <li><strong>wdata_q</strong>: Queue to hold data for writing to the FIFO.</li>
     <li><strong>wdata</strong>: Data being written to or read from the FIFO.</li>
 </ul>
+
+
+ <h2>Timing Diagram</h2>
+![image](https://github.com/user-attachments/assets/e8fc120d-cd4a-4d19-96e6-fda7ff84cf2a)
