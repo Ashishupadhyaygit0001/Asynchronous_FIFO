@@ -32,6 +32,6 @@ module wptr_handler #(parameter PTR_WIDTH=3) (
       full <= wfull;
   end
 
-  assign wfull = (g_wptr_next == {~g_rptr_sync[PTR_WIDTH:PTR_WIDTH-1], g_rptr_sync[PTR_WIDTH-2:0]});
+  assign wfull = ({~b_wptr[PTR_WIDTH], b_wptr[PTR_WIDTH-1:0]} == b_rptr_sync);
 
 endmodule
