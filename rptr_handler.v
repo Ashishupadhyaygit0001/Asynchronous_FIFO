@@ -32,6 +32,6 @@ module rptr_handler #(parameter PTR_WIDTH=3) (
       empty <= rempty;
   end
 
-  assign rempty = (g_wptr_sync == g_rptr_next);
+  assign rempty = (b_wptr_sync == b_rptr_next);
 
 endmodule
